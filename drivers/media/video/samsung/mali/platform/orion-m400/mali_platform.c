@@ -506,8 +506,8 @@ _mali_osk_errcode_t g3d_power_domain_control(int bpower_on)
 	if (bpower_on)
 	{
 #if MALI_PMM_RUNTIME_JOB_CONTROL_ON
-		MALI_DEBUG_PRINT(3,("_mali_osk_pmm_dev_activate \n"));
-		_mali_osk_pmm_dev_activate();
+		MALI_DEBUG_PRINT(3,("_mali_osk_pm_dev_activate \n"));
+		_mali_osk_pm_dev_activate();
 #else //MALI_PMM_RUNTIME_JOB_CONTROL_ON
 		void __iomem *status;
 		u32 timeout;
@@ -529,8 +529,8 @@ _mali_osk_errcode_t g3d_power_domain_control(int bpower_on)
 	else
 	{
 #if MALI_PMM_RUNTIME_JOB_CONTROL_ON
-		MALI_DEBUG_PRINT( 4,("_mali_osk_pmm_dev_idle\n"));
-		_mali_osk_pmm_dev_idle();
+		MALI_DEBUG_PRINT( 4,("_mali_osk_pm_dev_idle\n"));
+		_mali_osk_pm_dev_idle();
 
 #else //MALI_PMM_RUNTIME_JOB_CONTROL_ON
 		void __iomem *status;
