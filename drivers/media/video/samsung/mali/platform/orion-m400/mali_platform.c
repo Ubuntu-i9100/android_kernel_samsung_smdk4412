@@ -19,7 +19,7 @@
 #include "mali_linux_pm.h"
 
 #if USING_MALI_PMM
-#include "mali_pmm.h"
+#include "mali_pm.h"
 #endif
 
 #include <linux/clk.h>
